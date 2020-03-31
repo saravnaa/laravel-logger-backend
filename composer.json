@@ -10,8 +10,10 @@
     "require": {
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
+        "fightbulc/moment": "^1.32",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "ixudra/curl": "^6.19",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "monolog/monolog": "^2.0"
