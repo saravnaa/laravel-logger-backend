@@ -12,11 +12,12 @@ class LogsController extends Controller
         $data = $request->all();
         $from = $data['from'];
         $to = $data['to'];
+        $size = $data['size'];
         $pageNumber = $data['pageNumber'];
         $body['query']['bool']['filter']['range']['datetime']['gte']=$from;
         $body['query']['bool']['filter']['range']['datetime']['lte']=$to;
         $body['from']=($pageNumber-1)*10;
-        $body['size']=10;
+        $body['size']=$size;
         $response = Curl::to("http://localhost:9200/logger/_search")
                          ->withData($body)->asJson()->post();
 
